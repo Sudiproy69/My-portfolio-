@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Base font size */
+html {
+    font-size: 16px;
+}
+
+body {
+    background: #000;
+    color: #fff;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 2.5rem;
+}
+
+.logo {
+    color: red;
+    font-size: 1.6rem;
+}
+
+nav a {
+    color: #fff;
+    margin-left: 1.5rem;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+nav a:hover {
+    color: red;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    padding: 4rem 2rem;
+    flex-wrap: wrap;
+}
+
+/* Profile Image */
+.profile img {
+    width: 16rem;
+    height: 16rem;
+    border-radius: 50%;
+    border: 0.3rem solid red;
+    object-fit: cover;
+}
+
+/* Content */
+.content h1 {
+    font-size: clamp(1.8rem, 5vw, 3rem);
+}
+
+.content h1 span {
+    color: red;
+}
+
+.content h3 {
+    font-size: clamp(1.1rem, 3vw, 1.5rem);
+    color: #ff4d4d;
+    margin: 0.6rem 0;
+}
+
+.content p {
+    font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+    max-width: 25rem;
+    color: #ccc;
+    line-height: 1.6;
+}
+
+/* Button */
+.btn {
+    display: inline-block;
+    margin-top: 1.2rem;
+    padding: 0.7rem 1.8rem;
+    background: red;
+    color: #fff;
+    border-radius: 2rem;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.btn:hover {
+    background: darkred;
+}
+
+/* Mobile extra fix */
+@media(max-width:600px) {
+    header {
+        flex-direction: column;
+        gap: 0.6rem;
+    }
+    
+    nav a {
+        margin-left: 1rem;
+        font-size: 0.9rem;
+    }
+    
+    .profile img {
+        width: 13rem;
+        height: 13rem;
+    }
+}

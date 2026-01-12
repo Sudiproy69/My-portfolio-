@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Skills</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body{
+            background:#000;
+            color:#fff;
+        }
+
+        header{
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            padding:1.2rem 2rem;
+            border-bottom:1px solid #222;
+        }
+
+        .logo{
+            color:red;
+            font-size:1.6rem;
+        }
+
+        nav a{
+            color:#fff;
+            margin-left:1.2rem;
+            text-decoration:none;
+        }
+
+        nav a:hover{
+            color:red;
+        }
+
+        .skills-page{
+            padding:3.5rem 1.5rem;
+            max-width:900px;
+            margin:auto;
+        }
+
+        .page-title{
+            text-align:center;
+            color:red;
+            font-size:clamp(2rem,5vw,3rem);
+            margin-bottom:2rem;
+        }
+
+        .intro{
+            text-align:center;
+            color:#ccc;
+            max-width:700px;
+            margin:0 auto 3rem;
+            line-height:1.6;
+            font-size:0.95rem;
+        }
+
+        .skill{
+            margin-bottom:1.8rem;
+        }
+
+        .skill h3{
+            margin-bottom:0.4rem;
+            font-size:1rem;
+        }
+
+        .skill p{
+            font-size:0.9rem;
+            color:#aaa;
+            margin-bottom:0.5rem;
+        }
+
+        .progress{
+            width:100%;
+            height:12px;
+            background:#222;
+            border-radius:10px;
+            overflow:hidden;
+        }
+
+        .progress span{
+            display:block;
+            height:100%;
+            background:red;
+            border-radius:10px;
+        }
+
+        .tools{
+            margin-top:3rem;
+            text-align:center;
+        }
+
+        .tools h2{
+            color:red;
+            margin-bottom:1rem;
+        }
+
+        .tools p{
+            color:#ccc;
+            font-size:0.95rem;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h2 class="logo">SUDIP</h2>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="skills.html">Skills</a>
+    </nav>
+</header>
+
+<section class="skills-page">
+    <h1 class="page-title">My Skills</h1>
+
+    <p class="intro">
+        I am a passionate web developer with strong knowledge of
+        frontend technologies. I focus on building clean,
+        responsive and user-friendly websites.
+    </p>
+
+    <!-- HTML -->
+    <div class="skill">
+        <h3>HTML5</h3>
+        <p>Creating clean, semantic and SEO-friendly website structure.</p>
+        <div class="progress"><span style="width:90%"></span></div>
+    </div>
+
+    <!-- CSS -->
+    <div class="skill">
+        <h3>CSS3</h3>
+        <p>Designing modern layouts using Flexbox, Grid and animations.</p>
+        <div class="progress"><span style="width:85%"></span></div>
+    </div>
+
+    <!-- JavaScript -->
+    <div class="skill">
+        <h3>JavaScript</h3>
+        <p>Adding interactivity and dynamic features to websites.</p>
+        <div class="progress"><span style="width:70%"></span></div>
+    </div>
+
+    <!-- Responsive -->
+    <div class="skill">
+        <h3>Responsive Design</h3>
+        <p>Building websites that work perfectly on all devices.</p>
+        <div class="progress"><span style="width:80%"></span></div>
+    </div>
+
+    <!-- Tools -->
+    <div class="tools">
+        <h2>Tools I Use</h2>
+        <p>VS Code • GitHub • Figma • Chrome DevTools</p>
+    </div>
+</section>
+
+</body>
+</html>

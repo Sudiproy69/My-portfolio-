@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Me</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body{
+            background:#000;
+            color:#fff;
+        }
+
+        header{
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            padding:1.2rem 2rem;
+            border-bottom:1px solid #222;
+        }
+
+        .logo{
+            color:red;
+            font-size:1.6rem;
+        }
+
+        nav a{
+            color:#fff;
+            margin-left:1.2rem;
+            text-decoration:none;
+        }
+
+        nav a:hover{
+            color:red;
+        }
+
+        .contact-page{
+            padding:3.5rem 1.5rem;
+            max-width:800px;
+            margin:auto;
+        }
+
+        .page-title{
+            text-align:center;
+            color:red;
+            font-size:clamp(2rem,5vw,3rem);
+            margin-bottom:1rem;
+        }
+
+        .subtitle{
+            text-align:center;
+            color:#ccc;
+            margin-bottom:3rem;
+            font-size:0.95rem;
+        }
+
+        .contact-box{
+            background:#111;
+            padding:2rem;
+            border-radius:1rem;
+            border:1px solid #222;
+        }
+
+        label{
+            display:block;
+            margin-bottom:0.3rem;
+        }
+
+        input, textarea{
+            width:100%;
+            padding:0.6rem;
+            margin-bottom:1.2rem;
+            background:#000;
+            border:1px solid #333;
+            border-radius:0.4rem;
+            color:#fff;
+        }
+
+        textarea{
+            height:120px;
+            resize:none;
+        }
+
+        .contact-btn{
+            width:100%;
+            padding:0.8rem;
+            background:red;
+            color:#fff;
+            border:none;
+            border-radius:2rem;
+            font-size:1rem;
+            cursor:pointer;
+        }
+
+        .contact-btn:hover{
+            background:darkred;
+        }
+
+        .info{
+            margin-top:2rem;
+            text-align:center;
+            color:#ccc;
+            font-size:0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h2 class="logo">SUDIP</h2>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="skills.html">Skills</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<section class="contact-page">
+    <h1 class="page-title">Contact Me</h1>
+    <p class="subtitle">Message me directly on WhatsApp</p>
+
+    <div class="contact-box">
+        <label>Your Name</label>
+        <input type="text" id="name" placeholder="Enter your name">
+
+        <label>Email Address</label>
+        <input type="email" id="email" placeholder="Enter your email">
+
+        <label>Your Message</label>
+        <textarea id="message" placeholder="Write your message"></textarea>
+
+        <button class="contact-btn" onclick="sendWhatsApp()">Send Message</button>
+    </div>
+
+    <div class="info">
+        <p>Email: sudipantara5720@gmail.com</p>
+        <p>WhatsApp: +91 93604 76003</p>
+    </div>
+</section>
+
+<script>
+function sendWhatsApp(){
+    var name = document.getElementById("name").value;
+    var email = document.getElementById("email").value;
+    var message = document.getElementById("message").value;
+
+    var phoneNumber = "919360476003"; // ✅ তোমার WhatsApp number
+
+    var text =
+        "Name: " + name + "%0A" +
+        "Email: " + email + "%0A%0A" +
+        "Message: " + message;
+
+    var url = "https://wa.me/" + phoneNumber + "?text=" + text;
+
+    window.open(url, "_blank");
+}
+</script>
+
+</body>
+</html>
